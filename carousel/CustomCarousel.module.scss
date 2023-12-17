@@ -1,0 +1,66 @@
+.carouselContainer {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  &:hover .navBtnContainer {
+    display: block;
+  }
+}
+
+.carousel {
+  overflow-x: scroll;
+  white-space: nowrap;
+  scroll-snap-type: both;
+  scroll-snap-align: start;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.item {
+  width: 280px;
+  height: auto;
+  @media (min-width: 768px) {
+    width: 300px;
+  }
+  @media (min-width: 1024px) {
+    width: 320px;
+  }
+  display: inline-block;
+  scroll-snap-align: start;
+  white-space: normal;
+}
+
+.navBtnContainer {
+  transition: all 0.3s ease-in-out;
+  display: none;
+}
+
+.nav_btn {
+  display: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #f4f4f4;
+  padding: 1rem;
+  font-size: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  z-index: 30;
+  @media (min-width: 576px) {
+    display: flex;
+  }
+  &:hover {
+    background-color: #fe5d1f;
+  }
+  &--left {
+    left: 0;
+  }
+  &--right {
+    right: 0;
+  }
+}
